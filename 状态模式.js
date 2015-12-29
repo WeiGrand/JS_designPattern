@@ -26,3 +26,24 @@ YellowLight.prototype.go = function(){
 
 trafficLight.change(new RedLight());
 trafficLight.change(new YellowLight());
+
+//demo2
+function Menu(){};
+Menu.prototype.toggle = function(state){
+    state();
+}
+
+var menuState = {
+    show : function(){
+        console.log('the menu is showing');
+    },
+
+    hide : function(){
+        console.log('the menu is hiding');
+    }
+}
+
+var menu = new Menu();
+
+menu.toggle(menuState.show);
+menu.toggle(menuState.hide);
